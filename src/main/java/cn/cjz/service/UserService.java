@@ -1,5 +1,6 @@
 package cn.cjz.service;
 
+import cn.cjz.annotation.Log;
 import cn.cjz.model.User;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    @Log("用户信息查询-2")
     public User findUserById(Integer userId) {
         return User
                 .builder()
