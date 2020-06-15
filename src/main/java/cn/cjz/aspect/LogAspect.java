@@ -4,6 +4,7 @@ import cn.cjz.annotation.Log;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 /**
  * @author: Kam-Chou
@@ -11,6 +12,7 @@ import org.aspectj.lang.annotation.Pointcut;
  * @description: 日志切面逻辑类
  * @version: 1.0
  */
+@Component
 @Aspect
 public class LogAspect {
 
