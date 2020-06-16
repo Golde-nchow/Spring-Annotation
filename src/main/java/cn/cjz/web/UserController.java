@@ -39,7 +39,7 @@ public class UserController {
      * @return   用户信息字符串
      */
     @Log("用户信息查询-1")
-    @PostMapping("{id}")
+    @PostMapping("2/{id}")
     public User selectById2(@PathVariable Integer id) {
         return userService.findUserById2(id);
     }
