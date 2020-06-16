@@ -1,5 +1,6 @@
 package cn.cjz.service;
 
+import cn.cjz.annotation.ComplexLog;
 import cn.cjz.annotation.Log;
 import cn.cjz.model.User;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,14 @@ public class UserService {
                 .id(userId)
                 .username("username of id:" + userId)
                 .password("password of id: " + userId)
+                .build();
+    }
+
+    @ComplexLog("用户查询信息-2")
+    public User findUserById2(Integer userId) {
+        return User
+                .builder()
+                .id(userId)
                 .build();
     }
 

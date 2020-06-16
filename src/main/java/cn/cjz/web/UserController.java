@@ -33,4 +33,15 @@ public class UserController {
         return userService.findUserById(id);
     }
 
+    /**
+     * 通过ID获取对应的用户信息
+     * @param id 用户的ID信息
+     * @return   用户信息字符串
+     */
+    @Log("用户信息查询-1")
+    @PostMapping("{id}")
+    public User selectById2(@PathVariable Integer id) {
+        return userService.findUserById2(id);
+    }
+
 }
