@@ -1,5 +1,6 @@
 package cn.cjz.web;
 
+import cn.cjz.annotation.ComplexLog;
 import cn.cjz.annotation.Log;
 import cn.cjz.model.User;
 import cn.cjz.service.UserService;
@@ -38,7 +39,7 @@ public class UserController {
      * @param id 用户的ID信息
      * @return   用户信息字符串
      */
-    @Log("用户信息查询-1")
+    @ComplexLog("用户信息查询-1")
     @PostMapping("2/{id}")
     public User selectById2(@PathVariable Integer id) {
         return userService.findUserById2(id);
